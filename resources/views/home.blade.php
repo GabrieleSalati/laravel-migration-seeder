@@ -12,7 +12,27 @@
 </head>
 
 <body>
-    <h1>CIAO</h1>
+    <div class="container">
+        <div class="row">
+            @foreach ($trains as $train)
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $train['company'] }}</h5>
+                            <p class="card-text">{{ $train['from'] }}</p>
+                            <p class="card-text">{{ $train['to'] }}</p>
+                            <p class="card-text">{{ $train['departure_time'] }}</p>
+                            <p class="card-text">{{ $train['arrival_time'] }}</p>
+                            <p class="card-text">{{ $train['code'] }}</p>
+                            <p class="card-text">{{ $train['cars'] }}</p>
+                            <p class="card-text">{{ $train['on_time'] }}</p>
+                            <p class="card-text">{{ $train['canceled'] }}</p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
 </body>
 
 </html>
