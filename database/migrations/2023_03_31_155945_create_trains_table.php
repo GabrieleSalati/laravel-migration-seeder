@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string("company", 30);
             $table->string("from", 40);
             $table->string("to", 40);
-            $table->DateTimeBetween("departure_time", ["now" + "10 hours"]);
-            $table->DateTimeBetween("arrival_time", ["now" + "10 hours"]);
-            $table->smallInt("code")->unsigned();
-            $table->tinyInt("cars")->unsigned();
+            $table->dateTime("departure_time");
+            $table->dateTime("arrival_time",);
+            $table->smallInteger("code")->unsigned();
+            $table->tinyInteger("cars")->unsigned();
             $table->enum("on_time", ["yes", "no"]);
             $table->enum("canceled", ["yes", "no"]);
             $table->timestamps();
